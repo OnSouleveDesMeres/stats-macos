@@ -16,7 +16,7 @@ jobs:
       -
         name: Run the synchronizer
         run: |
-          for i in ghostty-org/ghostty 
+          for i in ghostty-org/ghostty gnachman/iTerm2
           do
             bash synchronizer.sh "$i"
           done
