@@ -16,10 +16,14 @@ jobs:
       -
         name: Run the synchronizer
         run: |
-          for i in ghostty-org/ghostty gnachman/iTerm2
+          for i in ghostty-org/ghostty
           do
             bash synchronizer.sh "$i"
           done
+      -
+        name: Synchronize iTerm2
+        run: |
+          curl -o iTerm -LO https://iterm2.com/downloads/stable/latest
       - 
         uses: EndBug/add-and-commit@v9
         with:
