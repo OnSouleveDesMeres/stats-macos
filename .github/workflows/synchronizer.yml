@@ -16,7 +16,7 @@ jobs:
       -
         name: Run the synchronizer
         run: |
-          for i in ghostty-org/ghostty
+          for i in ghostty-org/ghostty tom-james-watson/breaktimer-app
           do
             bash synchronizer.sh "$i"
           done
