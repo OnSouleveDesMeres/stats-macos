@@ -26,6 +26,10 @@ jobs:
         name: Synchronize iTerm2
         run: |
           curl -o iTerm -LO https://iterm2.com/downloads/stable/latest
+      -
+        name: Track LFS
+        run: |
+          git lfs track "BreakTimer*"
       - 
         uses: EndBug/add-and-commit@v9
         with:
