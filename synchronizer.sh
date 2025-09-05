@@ -1,3 +1,3 @@
 #!/bin/bash
 
-curl -LO $(curl -s https://api.github.com/repos/$1/releases | grep browser_download_url | cut -d '"' -f 4 | grep -Ei "mac|darwin|zip" | grep -v "blockmap" | grep -v "debug|blockmap")
+curl -LO $(curl -s https://api.github.com/repos/$1/releases | grep browser_download_url | cut -d '"' -f 4 | grep -Ei "mac|darwin|zip" | grep -v "blockmap" | grep -v "ml" | grep -v "debug" | head -n 1)
