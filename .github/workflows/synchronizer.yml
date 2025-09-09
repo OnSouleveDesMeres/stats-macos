@@ -27,9 +27,13 @@ jobs:
         run: |
           curl -o iTerm -LO https://iterm2.com/downloads/stable/latest
       -
-        name: Track LFS
+        name: Split large zip files
         run: |
-          git lfs track "BreakTimer*"
+          for i in BreakTimer
+          do
+            zip "$i".zip --out "$i".zip -s 50m
+            rm "$i".zip
+          done
       - 
         uses: EndBug/add-and-commit@v9
         with:
