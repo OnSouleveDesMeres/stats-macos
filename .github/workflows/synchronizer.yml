@@ -31,8 +31,8 @@ jobs:
         run: |
           for i in BreakTimer
           do
-            zip "$i".zip --out "$i".zip -s 50m
-            rm "$i".zip
+            zip $i.zip --out $i.part.zip -s 50m
+            rm $i.zip
           done
       - 
         uses: EndBug/add-and-commit@v9
